@@ -85,10 +85,10 @@ nav {
 
 .dp {
   height: 125px;
-  width: 170px;
+  width: 125px;
   border-radius: 7px;
   background-color: var(--dummy-color);
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .intro {
@@ -273,7 +273,7 @@ hr {
 
   .dp {
     height: 100px;
-    width: 140px;
+    width: 100px;
   }
 
   .name {
