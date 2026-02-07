@@ -2,7 +2,7 @@ const cardData = [
   {
     name: "Md. Rakibul Islam Sabid",
     roll: "07",
-    blood: "B+(ve)",
+    blood: "B+",
     image: "images/sparse_brainer.jpg",
     contact: "01867428503",
     emergency_contact: "01724452874",
@@ -12,7 +12,7 @@ const cardData = [
   {
     name: "Md Sahed Songram",
     roll: "32",
-    blood: "A+(ve)",
+    blood: "A+",
     image: "images/sahed.jpg",
     contact: "01835658576",
     emergency_contact: "01718796010",
@@ -22,7 +22,7 @@ const cardData = [
   {
     name: "Labib sikder",
     roll: "10",
-    blood: "A+(ve)",
+    blood: "A+",
     image: "images/labib.jpg",
     contact: "+3584578753822",
     emergency_contact: "",
