@@ -16,7 +16,7 @@ const cardData = [
     image: "images/sahed.jpg",
     contact: "01835658576",
     emergency_contact: "01718796010",
-    email_address: "",
+    email_address: "sahedbhaiya76@gmail.com",
     facebook_profile: "https://www.facebook.com/pronoy.shikdar.9",
   },
   {
