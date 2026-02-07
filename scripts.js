@@ -10,16 +10,6 @@ const cardData = [
     facebook_profile: "http://www.facebook.com/sparse_brainer",
   },
   {
-    name: "Md Sahed Songram",
-    roll: "32",
-    blood: "A+",
-    image: "images/sahed.jpg",
-    contact: "01835658576",
-    emergency_contact: "01718796010",
-    email_address: "sahedbhaiya76@gmail.com",
-    facebook_profile: "https://www.facebook.com/pronoy.shikdar.9",
-  },
-  {
     name: "Labib sikder",
     roll: "10",
     blood: "A+",
@@ -28,6 +18,16 @@ const cardData = [
     emergency_contact: "",
     email_address: "labibsikder121292fi1@gmail.com",
     facebook_profile: "https://www.facebook.com/share/1L9WgDbtyA/",
+  },
+  {
+    name: "Md Sahed Songram",
+    roll: "32",
+    blood: "A+",
+    image: "images/sahed.jpg",
+    contact: "01835658576",
+    emergency_contact: "01718796010",
+    email_address: "sahedbhaiya76@gmail.com",
+    facebook_profile: "https://www.facebook.com/pronoy.shikdar.9",
   },
 ];
 
