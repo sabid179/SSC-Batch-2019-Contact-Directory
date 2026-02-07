@@ -124,7 +124,7 @@ nav {
 }
 
 .bgroup-box {
-  height: 25px;
+  height: auto;
   width: auto;
   padding: 0px 10px;
   background-color: var(--primary-color);
