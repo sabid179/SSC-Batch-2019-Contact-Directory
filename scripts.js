@@ -7,7 +7,7 @@ const cardData = [
     contact: "01867428503",
     emergency_contact: "01724452874",
     email_address: "msabid2310179@bscse.uiu.ac.bd",
-    facebook_profile: "http://www.facebook.com/sparse_brainer",
+    facebook_profile: "http://www.facebook.com/sparsebrainer",
   },
   {
     name: "Labib sikder",
@@ -57,16 +57,52 @@ function renderCards(data) {
                 <hr />
                 <div class="btn-container">
                     <div class="btn-container-inside">
-                        <button class="btn" style="background-color: rgb(4, 123, 0)" onclick="window.location.href='tel:${student.contact}'">Call Now</button>
-                        <button class="btn" style="background-color: rgb(123, 4, 0)" onclick="window.location.href='tel:${student.emergency_contact}'">Emergency Contact</button>
+                        <button class="btn call-btn" style="background-color: rgb(4, 123, 0)">Call Now</button>
+                        <button class="btn emergency-btn" style="background-color: rgb(123, 4, 0)">Emergency Contact</button>
                     </div>
                     <div class="btn-container-inside">
-                        <button class="btn" style="background-color: rgb(0, 102, 123)" onclick="window.location.href='mailto:${student.email_address}'">Send Email</button>
-                        <button class="btn" style="background-color: rgb(0, 110, 236)" onclick="window.location.href='${student.facebook_profile}'">Facebook Profile</button>
+                        <button class="btn email-btn" style="background-color: rgb(0, 102, 123)">Send Email</button>
+                        <button class="btn facebook-btn" style="background-color: rgb(0, 110, 236)">Facebook Profile</button>
                     </div>
                 </div>
             `;
     cardContainer.appendChild(card);
+
+    const callBtn = card.querySelector(".call-btn");
+    callBtn.addEventListener("click", () => {
+      if (!student.contact) {
+        alert("Phone number not available");
+        return;
+      }
+      window.location.href = `tel:${student.contact}`;
+    });
+
+    const emergencyBtn = card.querySelector(".emergency-btn");
+    emergencyBtn.addEventListener("click", () => {
+      if (!student.emergency_contact) {
+        alert("Emergency contact not available");
+        return;
+      }
+      window.location.href = `tel:${student.emergency_contact}`;
+    });
+
+    const emailBtn = card.querySelector(".email-btn");
+    emailBtn.addEventListener("click", () => {
+      if (!student.email_address) {
+        alert("Email address not available");
+        return;
+      }
+      window.location.href = `mailto:${student.email_address}`;
+    });
+
+    const facebookBtn = card.querySelector(".facebook-btn");
+    facebookBtn.addEventListener("click", () => {
+      if (!student.facebook_profile) {
+        alert("Facebook profile not available");
+        return;
+      }
+      window.location.href = student.facebook_profile;
+    });
   });
 }
 
