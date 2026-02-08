@@ -1,5 +1,25 @@
 const cardData = [
   {
+    name: "Md Morsalin",
+    roll: "02",
+    blood: "B+",
+    image: "images/morsalin.webp",
+    contact: "01997588068",
+    emergency_contact: "01997588068",
+    email_address: "ahmedmorsalin068@gmail.com",
+    facebook_profile: "https://www.facebook.com/share/1DxF5KRpbT/",
+  },
+  {
+    name: "Mahbullah Sikder Dhip",
+    roll: "04",
+    blood: "O+",
+    image: "images/dhip.webp",
+    contact: "01581862526",
+    emergency_contact: "",
+    email_address: "mahbullahsikder@gmail.com",
+    facebook_profile: "https://www.facebook.com/share/1dxLEK69wK/",
+  },
+  {
     name: "Md. Rakibul Islam Sabid",
     roll: "07",
     blood: "B+",
@@ -10,7 +30,7 @@ const cardData = [
     facebook_profile: "http://www.facebook.com/sparsebrainer",
   },
   {
-    name: "Labib sikder",
+    name: "Labib Sikder",
     roll: "10",
     blood: "A+",
     image: "images/labib.webp",
@@ -40,6 +60,16 @@ const cardData = [
     facebook_profile: "https://www.facebook.com/TANVIR.TNT",
   },
   {
+    name: "Morad Sikder",
+    roll: "45",
+    blood: "B+",
+    image: "images/morad.webp",
+    contact: "01621160481",
+    emergency_contact: "01633118657",
+    email_address: "moradsikder097@gmail.com",
+    facebook_profile: "https://www.facebook.com/shikder.morad",
+  },
+  {
     name: "Majedul Shihab",
     roll: "47",
     blood: "O+",
@@ -47,7 +77,8 @@ const cardData = [
     contact: "01703026595",
     emergency_contact: "01910566201",
     email_address: "mishihab6595@gmail.com",
-    facebook_profile: "https://www.facebook.com/share/1ATtQqzg7U/?mibextid=wwXIfr",
+    facebook_profile:
+      "https://www.facebook.com/share/1ATtQqzg7U/?mibextid=wwXIfr",
   },
   {
     name: "Biplob Al Muhin",
