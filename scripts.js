@@ -3,7 +3,7 @@ const cardData = [
     name: "Md. Rakibul Islam Sabid",
     roll: "07",
     blood: "B+",
-    image: "images/sparse_brainer.jpg",
+    image: "images/sparse_brainer.webp",
     contact: "01867428503",
     emergency_contact: "01724452874",
     email_address: "msabid2310179@bscse.uiu.ac.bd",
@@ -13,7 +13,7 @@ const cardData = [
     name: "Labib sikder",
     roll: "10",
     blood: "A+",
-    image: "images/labib.jpg",
+    image: "images/labib.webp",
     contact: "+3584578753822",
     emergency_contact: "",
     email_address: "labibsikder121292fi1@gmail.com",
@@ -23,7 +23,7 @@ const cardData = [
     name: "Md Sahed Songram",
     roll: "32",
     blood: "A+",
-    image: "images/sahed.jpg",
+    image: "images/sahed.webp",
     contact: "01835658576",
     emergency_contact: "01718796010",
     email_address: "sahedbhaiya76@gmail.com",
@@ -33,7 +33,7 @@ const cardData = [
     name: "Tanvir Ahmad",
     roll: "33",
     blood: "O+",
-    image: "images/tanvir33.jpg",
+    image: "images/tanvir33.webp",
     contact: "01828729961",
     emergency_contact: "01519601489",
     email_address: "tanvirnurse@gmail.com",
@@ -43,7 +43,7 @@ const cardData = [
     name: "Majedul Shihab",
     roll: "47",
     blood: "O+",
-    image: "images/majedulshihab.jpeg",
+    image: "images/majedulshihab.webp",
     contact: "01703026595",
     emergency_contact: "01910566201",
     email_address: "mishihab6595@gmail.com",
@@ -53,7 +53,7 @@ const cardData = [
     name: "Biplob Al Muhin",
     roll: "103",
     blood: "B+",
-    image: "images/biplob.jpg",
+    image: "images/biplob.webp",
     contact: "01872313208",
     emergency_contact: "01752313208",
     email_address: "biplobahmed146@gmail.com",
@@ -74,7 +74,7 @@ function renderCards(data) {
     card.className = "card";
     card.innerHTML = `
                 <div class="intro">
-                    <img src="${student.image}" alt="" class="dp" />
+                    <img src="${student.image}" loading="lazy" alt="" class="dp" />
                     <div class="intro-right">
                         <div class="name">${student.name}</div>
                         <div class="roll">Roll No. ${student.roll}</div>
