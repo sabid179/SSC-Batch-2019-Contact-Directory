@@ -29,6 +29,36 @@ const cardData = [
     email_address: "sahedbhaiya76@gmail.com",
     facebook_profile: "https://www.facebook.com/pronoy.shikdar.9",
   },
+  {
+    name: "Tanvir Ahmad",
+    roll: "33",
+    blood: "O+",
+    image: "images/tanvir33.jpg",
+    contact: "01828729961",
+    emergency_contact: "01519601489",
+    email_address: "tanvirnurse@gmail.com",
+    facebook_profile: "https://www.facebook.com/TANVIR.TNT",
+  },
+  {
+    name: "Majedul Shihab",
+    roll: "47",
+    blood: "O+",
+    image: "images/majedulshihab.jpeg",
+    contact: "01703026595",
+    emergency_contact: "01910566201",
+    email_address: "mishihab6595@gmail.com",
+    facebook_profile: "https://www.facebook.com/share/1ATtQqzg7U/?mibextid=wwXIfr",
+  },
+  {
+    name: "Biplob Al Muhin",
+    roll: "103",
+    blood: "B+",
+    image: "images/biplob.jpg",
+    contact: "01872313208",
+    emergency_contact: "01752313208",
+    email_address: "biplobahmed146@gmail.com",
+    facebook_profile: "https://www.facebook.com/share/1bdzXR3CJ5/",
+  },
 ];
 
 const cardContainer = document.querySelector(".card-container");
