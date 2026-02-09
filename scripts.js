@@ -40,6 +40,16 @@ const cardData = [
     facebook_profile: "https://www.facebook.com/share/1L9WgDbtyA/",
   },
   {
+    name: "Mahidur Rahman",
+    roll: "17",
+    blood: "A+",
+    image: "images/mahid.webp",
+    contact: "01904827895",
+    emergency_contact: "01511563696",
+    email_address: "mahidurrahman066@gmail.com",
+    facebook_profile: "https://www.facebook.com/mahidur.rahaman.3762",
+  },
+  {
     name: "Md Sahed Songram",
     roll: "32",
     blood: "A+",
