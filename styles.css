@@ -58,8 +58,7 @@ nav {
 }
 .bgroup-box,
 .card,
-.card-container,
-.dp {
+.card-container {
   border-radius: 17px;
 }
 .card-container {
@@ -83,7 +82,7 @@ nav {
   width: 125px;
   border-radius: 50%;
   background-color: var(--dummy-color);
-  object-fit: fill;
+  object-fit:cover;
 }
 .bgroup-box,
 .name {
