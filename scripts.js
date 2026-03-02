@@ -121,37 +121,40 @@ function renderCards(data) {
   cardContainer.innerHTML = "";
 
   data.forEach((student) => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-                <div class="intro">
-                    <img src="${student.image}" loading="lazy" alt="" class="dp" />
-                    <div class="intro-right">
-                        <div class="name">${student.name}</div>
-                        <div class="roll">Roll No. ${student.roll}</div>
-                        <div class="blood">
-                            <div class="bgroup-text">Blood Group:</div>
-                            <div class="bgroup-box">${student.blood}</div>
-                        </div>
-                    </div>
+  const card = document.createElement("div");
+  card.className = "col-12 col-md-6 col-xl-4";
+  card.innerHTML = `
+        <article class="card premium-card h-100 border-0">
+          <div class="card-body d-flex flex-column">
+            <div class="intro">
+              <img src="${student.image}" loading="lazy" alt="" class="dp" />
+              <div class="intro-right">
+                <div class="name">${student.name}</div>
+                <div class="roll">Roll No. ${student.roll}</div>
+                <div class="blood">
+                  <div class="bgroup-text">Blood Group:</div>
+                  <div class="bgroup-box">${student.blood}</div>
                 </div>
-                <hr />
-                <div class="btn-container">
-                    <div class="btn-container-inside">
-                        <button class="btn call-btn" style="background-color: rgb(4, 123, 0);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button>
-                        <button class="btn emergency-btn" style="background-color: rgb(123, 4, 0);
-                        font-size: 13px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        Emergency Contact</button>
-                        <button class="btn email-btn" style="background-color: rgb(0, 102, 123)">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></button>
-                        <button class="btn facebook-btn" style="background-color: rgb(0, 110, 236)">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="0"><path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path></svg></button>
-                    </div>
-                </div>
-            `;
-    cardContainer.appendChild(card);
+              </div>
+            </div>
+            <hr />
+            <div class="btn-container mt-auto">
+              <div class="btn-container-inside">
+                <button class="btn action-btn call-btn" type="button" aria-label="Call">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button>
+                <button class="btn action-btn emergency-btn" type="button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Emergency</button>
+                <button class="btn action-btn email-btn" type="button" aria-label="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></button>
+                <button class="btn action-btn facebook-btn" type="button" aria-label="Facebook">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="0"><path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+  cardContainer.appendChild(card);
 
     const callBtn = card.querySelector(".call-btn");
     callBtn.addEventListener("click", () => {

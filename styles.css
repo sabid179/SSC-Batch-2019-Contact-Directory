@@ -1,104 +1,136 @@
 @import url(https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
-.search-btn,
-nav {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-}
-.bgroup-box,
-.btn,
-.card,
-.search {
-  box-sizing: border-box;
-}
 :root {
-  --primary-color: rgb(20, 139, 139);
-  --text-light: white;
+  --primary-color: #0d9488;
+  --primary-dark: #0f766e;
+  --surface: #ffffff;
+  --surface-soft: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-light: #ffffff;
+  --border: #e2e8f0;
+  --shadow: 0 12px 34px rgba(15, 23, 42, 0.12);
+  --radius: 16px;
   --font-main:
     "Saira", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
     Geneva, Verdana, sans-serif;
-  --dummy-color: rgb(170, 170, 170);
-}
-body {
-  background-color: rgb(240, 240, 240);
+  --dummy-color: #cbd5e1;
 }
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: var(--font-main);
 }
-nav {
-  padding: 10px;
+
+.premium-bg {
+  background: linear-gradient(160deg, #f8fafc 0%, #eef2ff 45%, #f8fafc 100%);
+  color: var(--text-main);
+  min-height: 100vh;
 }
+
+header,
+main,
+footer {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.premium-nav {
+  margin-top: 22px;
+  padding: 18px 24px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.25), transparent 35%),
+    linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-light);
+  box-shadow: var(--shadow);
+}
+
 .student-directory {
-  font-size: 40px;
+  font-size: clamp(24px, 3vw, 34px);
   font-weight: 600;
   width: 100%;
 }
+
 .school-name {
-  font-family: saira;
-  font-size: 25px;
+  font-size: clamp(15px, 1.8vw, 20px);
+  font-weight: 400;
+  opacity: 0.95;
 }
+
 .sub-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 20px;
-  height: 100px;
+  margin: 24px 0;
+  padding: 14px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
+
 .search {
-  height: 40px;
-  width: 24%;
-  padding: 7px;
+  height: 46px;
+  padding: 10px 14px;
   font-size: 15px;
-  border-radius: 17px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background-color: var(--surface-soft);
+  color: var(--text-main);
 }
+
+.search:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.search-input {
+  width: 100%;
+}
+
 .search-btn {
-  border: none;
-  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-light) !important;
+  font-weight: 600;
+  border: 0;
 }
-.bgroup-box,
-.card,
+
+.search-btn:hover {
+  opacity: 0.95;
+}
+
 .card-container {
-  border-radius: 17px;
+  width: 100%;
+  margin: 0 0 28px;
 }
-.card-container {
-  width: auto;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 29px;
-  align-items: center;
-  flex-wrap: wrap;
+
+.premium-card {
+  min-height: 250px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow) !important;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.card {
-  height: 250px;
-  width: 32%;
-  box-shadow: 0 0 4px 0 #000;
-  padding: 17px;
-  background-color: white;
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
 }
+
 .dp {
   height: 125px;
   width: 125px;
   border-radius: 50%;
   background-color: var(--dummy-color);
-  object-fit:cover;
+  object-fit: cover;
+  border: 3px solid #e2e8f0;
 }
-.bgroup-box,
-.name {
-  height: auto;
-  width: auto;
-}
-.bgroup-box,
-.motto {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  display: flex;
-}
+
 .intro {
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
+
 .intro-right {
   display: flex;
   flex-direction: column;
@@ -111,137 +143,169 @@ nav {
   gap: 17px;
   align-items: center;
 }
+
 .roll {
   font-weight: 500;
   font-style: italic;
+  color: var(--text-muted);
 }
+
 .bgroup-text {
   font-weight: 700;
   font-size: 17px;
 }
+
 .bgroup-box {
-  padding: 2px 10px;
+  display: flex;
+  padding: 4px 12px;
+  border-radius: 999px;
   justify-content: center;
   align-items: center;
   font-weight: 700;
+  background-color: #ccfbf1;
+  color: #0f766e;
 }
+
 .name {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 21px;
+  font-weight: 600;
   overflow: hidden;
   word-wrap: break-word;
 }
+
 hr {
   margin-top: 17px;
+  border: 0;
+  border-top: 1px solid var(--border);
 }
+
 .btn-container {
   width: 100%;
-  height: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: auto;
-  /* background-color: rebeccapurple; */
-  flex-direction: column;
 }
+
 .btn-container-inside {
-  height: 100%;
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
 }
-.btn {
+
+.action-btn {
   border: 0;
-  border-radius: 50%;
+  border-radius: 12px;
   cursor: pointer;
-  height: 50px;
-  width: 50px;
-  color: var(--text-light);
-  font-size: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  height: 44px;
+  width: 44px;
+  color: var(--text-light) !important;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(2, 6, 23, 0.2);
 }
-.motto {
-  height: 100px;
-  font-size: 40px;
-  font-weight: 600;
-  justify-content: center;
-  align-items: center;
+
+.call-btn {
+  background: linear-gradient(135deg, #16a34a, #15803d);
 }
 
 .emergency-btn {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  width: 48%;
+  min-width: 140px;
+  font-size: 13px;
+  gap: 6px;
+}
+
+.email-btn {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+}
+
+.facebook-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.motto {
+  margin: 10px 0 20px;
+  height: 80px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), transparent 40%),
+    linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-light);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.add-me {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
   padding: 10px 20px;
-  width: 47%;
-  border-radius: 17px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+  z-index: 20;
 }
+
 @media (max-width: 1400px) {
-  .card {
-    width: 45%;
-  }
-}
-@media (max-width: 1024px) {
-  .card {
-    width: 100%;
-  }
   .sub-head {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
-    height: 100px;
-  }
-  .search {
-    height: 40px;
-    width: 90% !important;
-    padding: 5px;
-    box-sizing: border-box;
-    font-size: 15px;
-    border-radius: 7px;
-  }
-  .card-container {
-    padding-top: 20px;
+    margin: 20px 0;
   }
 }
+
 @media (max-width: 480px) {
-  nav {
-    padding: 5px;
+  .premium-nav {
+    padding: 14px;
   }
+
   .student-directory {
     font-size: 22px;
   }
+
   .school-name {
-    font-size: 18px;
+    font-size: 15px;
   }
-  .card {
-    width: 100%;
-    height: auto;
-    padding: 12px;
+
+  .premium-card {
+    min-height: auto;
   }
+
   .dp {
-    height: 100px;
-    width: 100px;
+    height: 88px;
+    width: 88px;
   }
+
   .name {
     width: 100%;
+    font-size: 19px;
   }
+
   .motto {
     font-size: 24px;
   }
+
   .btn-container-inside {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 7px;
-    align-items: center;
   }
 
   .emergency-btn {
-    width: 50%;
+    width: calc(100% - 104px);
+    min-width: 0;
+    font-size: 12px;
+  }
+
+  .add-me {
+    right: 12px;
+    bottom: 12px;
+    padding: 9px 16px;
   }
 }
