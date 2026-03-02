@@ -113,17 +113,34 @@ const cardData = [
 ];
 
 const cardContainer = document.querySelector(".card-container");
-const searchSelect = document.querySelector("select.search");
 const searchInput = document.querySelector("input.search");
 const searchBtn = document.querySelector(".search-btn");
+const validBloodGroups = ["a+", "a-", "b+", "b-", "ab+", "ab-", "o+", "o-"];
+
+function findBloodGroupFromQuery(query) {
+  for (const bg of validBloodGroups) {
+    if (query === bg) {
+      return bg;
+    }
+  }
+}
 
 function renderCards(data) {
   cardContainer.innerHTML = "";
 
+  if (data.length === 0) {
+    cardContainer.innerHTML = `
+      <div class="col-12">
+        <div class="alert alert-warning text-center py-4 mb-0" role="alert">No Student Found</div>
+      </div>
+    `;
+    return;
+  }
+
   data.forEach((student) => {
-  const card = document.createElement("div");
-  card.className = "col-12 col-md-6 col-xl-4";
-  card.innerHTML = `
+    const card = document.createElement("div");
+    card.className = "col-12 col-md-6 col-xl-4";
+    card.innerHTML = `
         <article class="card premium-card h-100 border-0">
           <div class="card-body d-flex flex-column">
             <div class="intro">
@@ -154,7 +171,7 @@ function renderCards(data) {
           </div>
         </article>
       `;
-  cardContainer.appendChild(card);
+    cardContainer.appendChild(card);
 
     const callBtn = card.querySelector(".call-btn");
     callBtn.addEventListener("click", () => {
@@ -196,31 +213,32 @@ function renderCards(data) {
 
 renderCards(cardData);
 
-searchBtn.addEventListener("click", () => {
-  const searchType = searchSelect.value;
+function handleSearch() {
   const searchTerm = searchInput.value.trim().toLowerCase();
-
-  if (!searchType || searchType === "") {
-    alert("Please select a search option");
-    return;
-  }
 
   if (!searchTerm) {
     renderCards(cardData);
     return;
   }
 
-  let filteredData = [];
+  const detectedBloodGroup = findBloodGroupFromQuery(searchTerm);
 
-  if (searchType === "option1") {
-    filteredData = cardData.filter((student) =>
-      student.name.toLowerCase().includes(searchTerm),
-    );
-  } else if (searchType === "option2") {
-    filteredData = cardData.filter((student) =>
-      student.blood.toLowerCase().includes(searchTerm),
-    );
-  }
+  const filteredData = detectedBloodGroup
+    ? cardData.filter(
+        (student) => student.blood.toLowerCase() === detectedBloodGroup,
+      )
+    : cardData.filter((student) =>
+        student.name.toLowerCase().includes(searchTerm),
+      );
 
   renderCards(filteredData);
+}
+
+searchBtn.addEventListener("click", handleSearch);
+
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    handleSearch();
+  }
 });
