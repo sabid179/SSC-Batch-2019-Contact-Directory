@@ -100,6 +100,16 @@ const cardData = [
     email_address: "biplobahmed146@gmail.com",
     facebook_profile: "https://www.facebook.com/share/1bdzXR3CJ5/",
   },
+  {
+    name: "Mohammad Zakir",
+    roll: "--",
+    blood: "AB+",
+    image: "images/zakir.webp",
+    contact: "01869673974",
+    emergency_contact: "",
+    email_address: "j4kir99@gmail.com",
+    facebook_profile: "https://www.facebook.com/share/1QHBtUY8vP/",
+  },
 ];
 
 const cardContainer = document.querySelector(".card-container");
